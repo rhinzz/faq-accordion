@@ -15,15 +15,18 @@ body {
     background-color: $purple-100;
     font-family: 'Work Sans', sans-serif;
 }
-.faqContainer{
+
+.faqContainer {
     background-color: $white;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 2rem;
     width: fit-content;
 
-    .accordion{
+    .accordion {
         max-width: 536px;
 
-        .accordion-item-header{
+        .accordion-item-header {
             padding: 0.5rem 2rem 0.5rem 0;
             min-height: 3.5rem;
             line-height: 1.25rem;
@@ -34,8 +37,10 @@ body {
             position: relative;
             cursor: pointer;
 
-            &::after{
+            &::after {
                 content: url("/assets/icon-plus.svg");
+                position: absolute;
+                right: 1rem;
             }
         }
     }

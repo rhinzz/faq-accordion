@@ -11,6 +11,8 @@ body {
 
 .faqContainer {
   background-color: hsl(0, 100%, 100%);
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -31,6 +33,8 @@ body {
 }
 .faqContainer .accordion .accordion-item-header::after {
   content: url("/assets/icon-plus.svg");
+  position: absolute;
+  right: 1rem;
 }
 
 .attribution {
