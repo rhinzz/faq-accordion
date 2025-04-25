@@ -36,6 +36,9 @@ body {
   position: absolute;
   right: 1rem;
 }
+.faqContainer .accordion .accordion-item-header.active::after {
+  content: url("/assets/icon-minus.svg");
+}
 
 .attribution {
   font-size: 11px;

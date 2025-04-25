@@ -42,6 +42,10 @@ body {
                 position: absolute;
                 right: 1rem;
             }
+
+            &.active::after {
+                content: url("/assets/icon-minus.svg");
+            }
         }
     }
 }
