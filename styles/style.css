@@ -14,15 +14,19 @@ body {
   border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem;
+  width: 100%;
+  max-width: 600px;
   width: -moz-fit-content;
   width: fit-content;
 }
-.faqContainer .accordion {
-  max-width: 536px;
+.faqContainer h1 {
+  color: hsl(292, 42%, 14%);
+  font-size: 3rem;
 }
 .faqContainer .accordion .accordion-item-header {
-  padding: 0.5rem 2rem 0.5rem 0;
-  min-height: 3.5rem;
+  color: hsl(292, 42%, 14%);
+  padding-right: 2rem;
+  min-height: 4rem;
   line-height: 1.25rem;
   font-size: 1.125rem;
   font-weight: 600;
@@ -34,10 +38,24 @@ body {
 .faqContainer .accordion .accordion-item-header::after {
   content: url("/assets/icon-plus.svg");
   position: absolute;
-  right: 1rem;
+  right: 0;
 }
 .faqContainer .accordion .accordion-item-header.active::after {
   content: url("/assets/icon-minus.svg");
+}
+.faqContainer .accordion .accordion-item-header.active + .accordion-item-body {
+  display: block;
+}
+.faqContainer .accordion .accordion-item-body {
+  display: none;
+  line-height: 1.5rem;
+  padding: 1rem 0;
+}
+.faqContainer .accordion .accordion-item-body .accordion-item-content {
+  color: hsl(292, 16%, 49%);
+}
+.faqContainer .accordion hr {
+  border-top: 1px solid hsl(275, 100%, 97%);
 }
 
 .attribution {

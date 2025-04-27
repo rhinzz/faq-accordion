@@ -21,14 +21,20 @@ body {
     border-radius: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 2rem;
+    width: 100%;
+    max-width: 600px;
     width: fit-content;
 
-    .accordion {
-        max-width: 536px;
+    h1 {
+        color: $purple-950;
+        font-size: 3rem;
+    }
 
+    .accordion {
         .accordion-item-header {
-            padding: 0.5rem 2rem 0.5rem 0;
-            min-height: 3.5rem;
+            color: $purple-950;
+            padding-right: 2rem;
+            min-height: 4rem;
             line-height: 1.25rem;
             font-size: 1.125rem;
             font-weight: 600;
@@ -40,12 +46,30 @@ body {
             &::after {
                 content: url("/assets/icon-plus.svg");
                 position: absolute;
-                right: 1rem;
+                right: 0;
             }
 
             &.active::after {
                 content: url("/assets/icon-minus.svg");
             }
+
+            &.active+.accordion-item-body {
+                display: block;
+            }
+        }
+
+        .accordion-item-body {
+            display: none;
+            line-height: 1.5rem;
+            padding: 1rem 0;
+
+            .accordion-item-content {
+                color: $purple-600;
+            }
+        }
+
+        hr {
+            border-top: 1px solid $purple-100;
         }
     }
 }
