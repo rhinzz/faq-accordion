@@ -23,11 +23,15 @@ body {
     padding: 2rem;
     max-width: 600px;
     width: 100%;
-    width: fit-content;
 
-    h1 {
-        color: $purple-950;
-        font-size: 3rem;
+    .heading {
+        display: flex;
+        gap: 1.5rem;
+
+        h1 {
+            color: $purple-950;
+            font-size: 3rem;
+        }
     }
 
     .accordion {
@@ -44,32 +48,35 @@ body {
             cursor: pointer;
 
             &::after {
-                content: url("/assets/icon-plus.svg");
+                content: url("../assets/icon-plus.svg");
                 position: absolute;
                 right: 0;
             }
 
             &.active::after {
-                content: url("/assets/icon-minus.svg");
+                content: url("../assets/icon-minus.svg");
             }
 
-            &.active+.accordion-item-body {
-                display: block;
-            }
+            // &.active+.accordion-item-body {
+            //     display: block;
+            // }
         }
 
         .accordion-item-body {
-            display: none;
-            line-height: 1.5rem;
-            padding: 1rem 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
 
+            // display: none;
             .accordion-item-content {
+                line-height: 1.5rem;
+                padding-bottom: 1rem;
                 color: $purple-600;
             }
         }
 
         hr {
-            border-top: 1px solid $purple-100;
+            border-top: 0.5px solid $purple-100;
         }
     }
 }

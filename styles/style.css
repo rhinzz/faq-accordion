@@ -16,10 +16,12 @@ body {
   padding: 2rem;
   max-width: 600px;
   width: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
 }
-.faqContainer h1 {
+.faqContainer .heading {
+  display: flex;
+  gap: 1.5rem;
+}
+.faqContainer .heading h1 {
   color: hsl(292, 42%, 14%);
   font-size: 3rem;
 }
@@ -36,26 +38,25 @@ body {
   cursor: pointer;
 }
 .faqContainer .accordion .accordion-item-header::after {
-  content: url("/assets/icon-plus.svg");
+  content: url("../assets/icon-plus.svg");
   position: absolute;
   right: 0;
 }
 .faqContainer .accordion .accordion-item-header.active::after {
-  content: url("/assets/icon-minus.svg");
-}
-.faqContainer .accordion .accordion-item-header.active + .accordion-item-body {
-  display: block;
+  content: url("../assets/icon-minus.svg");
 }
 .faqContainer .accordion .accordion-item-body {
-  display: none;
-  line-height: 1.5rem;
-  padding: 1rem 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 .faqContainer .accordion .accordion-item-body .accordion-item-content {
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
   color: hsl(292, 16%, 49%);
 }
 .faqContainer .accordion hr {
-  border-top: 1px solid hsl(275, 100%, 97%);
+  border-top: 0.5px solid hsl(275, 100%, 97%);
 }
 
 .attribution {
