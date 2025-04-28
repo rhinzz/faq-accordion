@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://rhinzz.github.io/faq-accordion/)
+- Solution URL: [faq-accordion](https://rhinzz.github.io/faq-accordion/)
 
 ### Built with
 
