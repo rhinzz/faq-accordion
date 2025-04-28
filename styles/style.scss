@@ -11,8 +11,16 @@ $purple-950: hsl(292, 42%, 14%);
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: $purple-100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -56,10 +64,6 @@ body {
             &.active::after {
                 content: url("../assets/icon-minus.svg");
             }
-
-            // &.active+.accordion-item-body {
-            //     display: block;
-            // }
         }
 
         .accordion-item-body {
@@ -67,7 +71,6 @@ body {
             overflow: hidden;
             transition: max-height 0.2s ease-out;
 
-            // display: none;
             .accordion-item-content {
                 line-height: 1.5rem;
                 padding-bottom: 1rem;
@@ -82,6 +85,7 @@ body {
 }
 
 .attribution {
+    display: none;
     font-size: 11px;
     text-align: center;
 
