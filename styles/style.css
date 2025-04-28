@@ -11,6 +11,8 @@ body {
 
 body {
   background-color: hsl(275, 100%, 97%);
+  background-image: url("../assets/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +23,7 @@ body {
   background-color: hsl(0, 100%, 100%);
   border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   max-width: 600px;
   width: 100%;
 }
@@ -60,7 +62,7 @@ body {
 }
 .faqContainer .accordion .accordion-item-body .accordion-item-content {
   line-height: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
   color: hsl(292, 16%, 49%);
 }
 .faqContainer .accordion hr {
@@ -68,10 +70,45 @@ body {
 }
 
 .attribution {
-  display: none;
+  position: absolute;
+  bottom: 3%;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    background-image: url("../assets/background-pattern-mobile.svg");
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 375px) {
+  body {
+    background-size: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .faqContainer {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+  .faqContainer .heading {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .faqContainer .heading img {
+    width: 2rem;
+  }
+  .faqContainer .heading h1 {
+    color: hsl(292, 42%, 14%);
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
